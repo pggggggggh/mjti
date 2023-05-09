@@ -55,12 +55,17 @@ export default Result;
 
 const Wrapper = styled.div`
   padding-top: 50px;
-  height: 120vh;
+  height: 100vh;
   width: 100%;
   background-image: linear-gradient(150deg, #ffffff 0%, #addff7 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 `;
 
 const Header = styled.div`
+  width: 80%;
   font-size: 24pt;
   display: flex;
   justify-content: center;
@@ -87,7 +92,7 @@ const Image = styled.div`
 `;
 
 const Desc = styled.div`
-  font-size: 20pt;
+  font-size: 14pt;
   width: 80%;
   text-align: center;
 `;

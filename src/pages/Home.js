@@ -36,10 +36,13 @@ const Home = () => {
 export default Home;
 
 const Wrapper = styled.div`
-  padding-top: 50px;
   height: 100vh;
   width: 100%;
-  background-image: linear-gradient(150deg, #ffffff 0%, #addff7 100%);
+  background-image: linear-gradient(150deg, #fffffe 0%, #addff7 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 `;
 
 const Header = styled.div`
@@ -52,6 +55,7 @@ const Header = styled.div`
 `;
 
 const Contents = styled.div`
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -77,7 +77,7 @@ const Question = () => {
         <Title>{Questions[questionNo].title} </Title>
         <ButtonGroup>
           <Button
-            style={{ width: "40vh", minHeight: "200px", fontSize: "15pt" }}
+            style={{ width: "30vh", minHeight: "120px", fontSize: "15pt" }}
             variant="danger"
             onClick={() => handleClickButton(0)}
           >
@@ -85,10 +85,10 @@ const Question = () => {
           </Button>
           <Button
             style={{
-              width: "40vh",
-              minHeight: "200px",
+              width: "30vh",
+              minHeight: "120px",
               fontSize: "15pt",
-              marginLeft: "30px",
+              marginLeft: "20px",
             }}
             variant="danger"
             onClick={() => handleClickButton(1)}
