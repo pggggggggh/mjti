@@ -36,6 +36,7 @@ const Home = () => {
 export default Home;
 
 const Wrapper = styled.div`
+  padding-top: 50px;
   height: 100vh;
   width: 100%;
   background-image: linear-gradient(150deg, #ffffff 0%, #addff7 100%);
