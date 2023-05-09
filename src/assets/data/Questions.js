@@ -21,8 +21,8 @@ export const Questions = [
     title: "헬스장.. 갈까 말까?",
     answerA: "사람은 운동을 해야지! 바로 이용권 결제!",
     answerB: "무슨 운동이야.. 그냥 뒹굴뒹굴거릴래!",
-    scoreA: { ms: 50, js: 70, sa: 50 },
-    scoreB: { cy: 50, jw: 50, hk: 50, kt: 50, sm: 50 },
+    scoreA: { ms: 50, js: 70, sa: 60 },
+    scoreB: { cy: 50, jw: 55, hk: 50, kt: 50, sm: 50 },
   },
   {
     id: 3,
@@ -37,8 +37,8 @@ export const Questions = [
     title: "두 선배 중에 고르자면?",
     answerA: "지칠 줄 모르는 텐션으로 재밌게 놀아주는 선배!",
     answerB: "조용하지만 듬직하게 내 얘기를 잘 들어주는 선배!",
-    scoreA: { ms: 55, cy: 50, jw: 55, hk: 50 },
-    scoreB: { kt: 50, sa: 50, sm: 50, js: 50 },
+    scoreA: { ms: 55, cy: 50, jw: 55, hk: 50, js: 50 },
+    scoreB: { kt: 50, sa: 50, sm: 50 },
   },
   {
     id: 5,
@@ -46,7 +46,7 @@ export const Questions = [
     answerA: "무조건 내 편 들어주고 그 애 욕해주기!",
     answerB: "내가 잘못한 점 냉철하게 지적하고 갈궈주기!",
     scoreA: { ms: 50, cy: 50, jw: 50, sa: 50, sm: 50, js: 50 },
-    scoreB: { kt: 100, hk: 80 },
+    scoreB: { kt: 100, hk: 70 },
   },
   {
     id: 6,

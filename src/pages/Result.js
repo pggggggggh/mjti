@@ -1,14 +1,20 @@
 import React from "react";
 import { styled } from "styled-components";
 import { Button } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { Results } from "../assets/data/Results";
 
 const Result = () => {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const winner = searchParams.get("winner");
+  console.log("winner", winner);
+  var idx = Results.findIndex((e) => e.id == winner);
+  console.log("idx", idx);
+  if (idx == -1) navigate("/");
 
   const handleClickButton = () => {
-    navigate("/question");
+    navigate("/");
   };
 
   return (
@@ -16,17 +22,29 @@ const Result = () => {
       <Header>나랑 가장 잘 맞을 것 같은 문정 23학번 선배는?!</Header>
       <Contents>
         <Image>
-          <img src={Results[0].image} width={350} height={350} />
+          <img src={Results[idx].image} width={350} height={350} />
         </Image>
-        <Title>{Results[0].name}</Title>
-        <Desc>{Results[0].desc}</Desc>
+        <Title>{Results[idx].name}</Title>
+        <Desc>{Results[idx].desc}</Desc>
+        <Button
+          variant="danger"
+          size="lg"
+          style={{ marginTop: "20px", fontFamily: "Suite", fontWeight: "bold" }}
+          href={`http://instagram.com/${Results[idx].insta}`}
+        >
+          DM 걸러 가기!
+        </Button>
         <Button
           variant="primary"
           size="lg"
-          style={{ marginTop: "5px", fontFamily: "Suite", fontWeight: "bold" }}
+          style={{
+            marginTop: "5px",
+            fontFamily: "Suite",
+            fontWeight: "",
+          }}
           onClick={handleClickButton}
         >
-          시작!
+          다시하기
         </Button>
       </Contents>
     </Wrapper>
@@ -37,7 +55,7 @@ export default Result;
 
 const Wrapper = styled.div`
   padding-top: 50px;
-  height: 100vh;
+  height: 120vh;
   width: 100%;
   background-image: linear-gradient(150deg, #ffffff 0%, #addff7 100%);
 `;

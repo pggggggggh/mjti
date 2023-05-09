@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 import { ProgressBar, Button } from "react-bootstrap";
 import { Questions } from "../assets/data/Questions";
 import { useNavigate } from "react-router-dom";
+import { createSearchParams } from "react-router-dom";
 
 const Question = () => {
   const [questionNo, setQuestionNo] = React.useState(0);
@@ -49,7 +50,17 @@ const Question = () => {
     setQuestionNo(questionNo + 1);
 
     if (Questions.length === questionNo + 1) {
-      navigate("/result");
+      var mxi = 0;
+      for (var i = 0; i < totalScore.length; i++) {
+        if (totalScore[mxi].score < totalScore[i].score) mxi = i;
+      }
+      var winner = totalScore[mxi].id;
+      navigate({
+        pathname: "/result",
+        search: `?${createSearchParams({
+          winner: winner,
+        })}`,
+      });
     }
   };
 
