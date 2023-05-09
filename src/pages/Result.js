@@ -9,9 +9,9 @@ const Result = () => {
   const [searchParams] = useSearchParams();
   const winner = searchParams.get("winner");
   console.log("winner", winner);
-  var idx = Results.findIndex((e) => e.id == winner);
+  var idx = Results.findIndex((e) => e.id === winner);
   console.log("idx", idx);
-  if (idx == -1) navigate("/");
+  if (idx === -1) navigate("/");
 
   const handleClickButton = () => {
     navigate("/");
@@ -22,7 +22,7 @@ const Result = () => {
       <Header>나랑 가장 잘 맞을 것 같은 문정 23학번 선배는?!</Header>
       <Contents>
         <Image>
-          <img src={Results[idx].image} width={350} height={350} />
+          <img alt="결과" src={Results[idx].image} width={350} height={350} />
         </Image>
         <Title>{Results[idx].name}</Title>
         <Desc>{Results[idx].desc}</Desc>

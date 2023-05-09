@@ -17,7 +17,7 @@ const Home = () => {
       <Contents>
         <Title>:MoonJung Type Indicator</Title>
         <LogoImage>
-          <img src={MainImage} width={350} height={350} />
+          <img alt="문헌정보학과" src={MainImage} width={350} height={350} />
         </LogoImage>
         <Desc>나랑 가장 잘 맞을 것 같은 문정 23학번 선배는?!</Desc>
         <Button

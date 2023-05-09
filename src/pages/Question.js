@@ -22,22 +22,24 @@ const Question = () => {
   const handleClickButton = (no) => {
     //var found = obj.find(e => e.name === 'John');
 
+    var index, idx;
     var newScore = totalScore;
+    var newObject;
     if (no === 0) {
-      var index = Questions.findIndex((e) => e.id === questionNo);
-      for (var key in Questions[index].scoreA) {
-        var idx = totalScore.findIndex((e) => e.id === key);
-        var newObject = {
+      index = Questions.findIndex((e) => e.id === questionNo);
+      for (let key in Questions[index].scoreA) {
+        idx = totalScore.findIndex((e) => e.id === key);
+        newObject = {
           id: totalScore[idx].id,
           score: totalScore[idx].score + Questions[index].scoreA[key],
         };
         newScore.splice(idx, 1, newObject);
       }
     } else {
-      var index = Questions.findIndex((e) => e.id === questionNo);
-      for (var key in Questions[index].scoreB) {
-        var idx = totalScore.findIndex((e) => e.id === key);
-        var newObject = {
+      index = Questions.findIndex((e) => e.id === questionNo);
+      for (let key in Questions[index].scoreB) {
+        idx = totalScore.findIndex((e) => e.id === key);
+        newObject = {
           id: totalScore[idx].id,
           score: totalScore[idx].score + Questions[index].scoreB[key],
         };
