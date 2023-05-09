@@ -88,7 +88,7 @@ const Question = () => {
               width: "30vh",
               minHeight: "120px",
               fontSize: "15pt",
-              marginLeft: "20px",
+              marginTop: "20px",
             }}
             variant="danger"
             onClick={() => handleClickButton(1)}
@@ -118,11 +118,12 @@ const Contents = styled.div`
 `;
 const Title = styled.div`
   font-size: 20pt;
+  text-align: center;
 `;
 const ButtonGroup = styled.div`
   margin-top: 30px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 `;

@@ -28,7 +28,7 @@ const Result = () => {
         <Desc>{Results[idx].desc}</Desc>
         <Button
           variant="danger"
-          size="lg"
+          size=""
           style={{ marginTop: "20px", fontFamily: "Suite", fontWeight: "bold" }}
           href={`http://instagram.com/${Results[idx].insta}`}
         >
@@ -36,7 +36,7 @@ const Result = () => {
         </Button>
         <Button
           variant="primary"
-          size="lg"
+          size=""
           style={{
             marginTop: "5px",
             fontFamily: "Suite",
@@ -54,17 +54,16 @@ const Result = () => {
 export default Result;
 
 const Wrapper = styled.div`
-  padding-top: 50px;
-  height: 100vh;
+  height: 120vh;
   width: 100%;
   background-image: linear-gradient(150deg, #ffffff 0%, #addff7 100%);
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
 `;
 
 const Header = styled.div`
+  padding-top: 20px;
   width: 80%;
   font-size: 24pt;
   display: flex;

@@ -40,7 +40,6 @@ const Wrapper = styled.div`
   width: 100%;
   background-image: linear-gradient(150deg, #fffffe 0%, #addff7 100%);
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
 `;
