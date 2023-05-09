@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "Suite";
+  src: url(/src/assets/fonts/SUITE-ExtraBold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Suite";
+  src: url(/src/assets/fonts/SUITE-Regular.ttf);
+  font-weight: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
